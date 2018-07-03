@@ -1,0 +1,17 @@
+**/.DS_Store
+/public/favicon
+/public/fonts
+/public/images
+/node_modules
+/public/hot
+/public/storage
+/database/seeds
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
