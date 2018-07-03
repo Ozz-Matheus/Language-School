@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\EmployeeAuth;
 
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 
 class ResetPasswordController extends Controller
@@ -39,6 +41,19 @@ class ResetPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('employee.guest');
+    }
+
+    protected function resetPassword($user, $password)
+    {
+        $user->password = $password;
+
+        $user->setRememberToken(Str::random(60));
+
+        $user->save();
+
+        event(new PasswordReset($user));
+
+        $this->guard()->login($user);
     }
 
     /**

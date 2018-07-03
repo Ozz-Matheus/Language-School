@@ -44,8 +44,8 @@ class StudentResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->line('You are receiving this email because we received a password reset request for your account.')
-            ->action('Reset Password', url('student/password/reset', $this->token))
-            ->line('If you did not request a password reset, no further action is required.');
+            ->line('Usted está recibiendo este correo electrónico porque recibimos una solicitud de restablecimiento de contraseña para su cuenta.')
+            ->action('Restablecer contraseña', url('student/password/reset', $this->token))
+            ->line('Si no solicitó restablecer la contraseña, no se requieren más acciones.');
     }
 }
