@@ -8,21 +8,21 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 
 class ContractsExport implements FromCollection, WithHeadings
 {
- 	use Exportable;
+    use Exportable;
 
     public function collection()
     {
-		$contracts = Contract::all();
+        $contracts = Contract::all();
 
         if(count($contracts) > 0){
 
-    		foreach ($contracts as $contract) 
-    		{
-    			$data[] = array(
-    					    "order" => $contract->order,
-    					    "date"=> $contract->date,
-    					    "name_of_holder"=> $contract->name_of_holder,
-    					    "age_of_the_holder"=> $contract->age_of_the_holder,
+            foreach ($contracts as $contract)
+            {
+                $data[] = array(
+                            "order" => $contract->order,
+                            "date"=> $contract->date,
+                            "name_of_holder"=> $contract->name_of_holder,
+                            "age_of_the_holder"=> $contract->age_of_the_holder,
                             "hitch"=> $contract->hitch,
                             "monthly_payments"=> $contract->monthly_payments,
                             "monthly_amount"=> $contract->monthly_amount,
@@ -30,14 +30,14 @@ class ContractsExport implements FromCollection, WithHeadings
                             "total_cost"=> $contract->total_cost,
                             "payment_method"=> $contract->payment_method,
                             "bank"=> $contract->bank,
-                            "employee"=> $contract->employee->name,
-    					    "branch_office"=> $contract->branch_office->name,
+                            "employee"=> $contract->employee ? $contract->employee->name : null,
+                            "branch_office"=> $contract->branch_office ? $contract->branch_office->name : null,
                             "created_at"=> $contract->created_at->formatLocalized('%A %d %B %Y %r') ,
                             "updated_at"=> $contract->updated_at->formatLocalized('%A %d %B %Y %r') ,
-    			);
-    		}
-    		    	
-        	return collect($data);
+                );
+            }
+
+            return collect($data);
         }
 
         $array[] = array(
@@ -45,7 +45,7 @@ class ContractsExport implements FromCollection, WithHeadings
         );
 
         return collect($array);
-		    	
+
     }
 
     public function headings(): array
