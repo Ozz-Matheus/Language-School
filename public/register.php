@@ -1,8 +1,8 @@
-<?php 
+<?php
 require 'scripts/connection.inc';
 $condition = "job_position_id = 1 or job_position_id = 2 or job_position_id = 3 or job_position_id = 4 or job_position_id = 5";
-$employees = mysql_query("select * from employees where $condition order by job_position_id asc");
-$data = mysql_query("select * from branch_offices order by id asc");
+$employees = $mysqli->query("select * from employees where $condition order by job_position_id asc");
+$data = $mysqli->query("select * from branch_offices order by id asc");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
@@ -129,7 +129,7 @@ url('//dkl3g0z0k6qzr.cloudfront.net/quickyformadmin/css/fonts/typeform_glyphs.sv
 font-weight: normal;
 font-style: normal;
 }
-#loadingLogo span, #loadingLogo svg, #unfixed-footer .content .button-wrapper.submit, #unfixed-footer .content .button-wrapper.review, #unfixed-footer .content .phishing-notice,#fixed-footer .by, .header.type-group, .header.sub.show{ 
+#loadingLogo span, #loadingLogo svg, #unfixed-footer .content .button-wrapper.submit, #unfixed-footer .content .button-wrapper.review, #unfixed-footer .content .phishing-notice,#fixed-footer .by, .header.type-group, .header.sub.show{
 display: none !important;
 }
 #envio{
@@ -234,8 +234,8 @@ formId: '3762901',
 lastEditorUserId: '2222370',
 appBehaviourKey: '5CHFipOVS715Gu3cR2JtJFPrMHc35h4k'
 }
-if( screen.width < 1200){ 
-    settings.browser= "touch"; settings.token ="https://miguelescobedo.typeform.com/app/form/result/token/NvIOCm/touch"; 
+if( screen.width < 1200){
+    settings.browser= "touch"; settings.token ="https://miguelescobedo.typeform.com/app/form/result/token/NvIOCm/touch";
 }else{ settings.browser= "default"; settings.token ="https://miguelescobedo.typeform.com/app/form/result/token/NvIOCm/default"; }
 </script>
 <script type="text/template" id="component-opinion-scale">
@@ -352,7 +352,7 @@ M-55.333,18.5h19"/>
             var serializedForm = {"fields":[{"id":"51908710","question":"Nombre asesor E4e","label":"Nombre asesor E4e","type":"textfield","required":false,"attachment_type":"","position":0,"calculations":[]},{"id":"54232968","question":"Registro","label":"Registro","type":"list-image","required":false,"attachment_type":"","position":1,"calculations":[],"multiple":true,"choices":{"68194813":{"id":"68194813","label":"DATO","position":0,"image":[]},"68194814":{"id":"68194814","label":"CITA","position":1,"image":[]},"68194815":{"id":"68194815","label":"MATRICULA","position":2,"image":[]}},"supersize":false,"labels_enabled":true},{"id":"54228037","question":"DATO","label":"DATO","type":"group","required":false,"attachment_type":"","position":2,"calculations":[],"content":"DATO","button":"","button_enabled":false},{"id":"54228248","question":"Nombre completo","label":"Nombre completo","type":"textfield","required":false,"attachment_type":"","position":3,"calculations":[]},{"id":"54228282","question":"Telefono","label":"Telefono","type":"textfield","required":false,"attachment_type":"","position":4,"calculations":[]},{"id":"54228622","question":"Correo","label":"Correo","type":"textfield","required":false,"attachment_type":"","position":5,"calculations":[]},{"id":"rtep","question":"En que municipio vive?","label":"En que municipio vive?","type":"dropdown","required":false,"attachment_type":"","position":6,"calculations":[],"choices":["Apodaca","Escobedo","Monterrey","Garcia","Guadalupe","San Pedro","San Nicolas","Otra"],"options":"Apodaca\r\nEscobedo\r\nMonterrey\r\nGarcia\r\nGuadalupe\r\nSan Pedro\r\nSan Nicolas\r\nOtra","alphabetical":false},{"id":"51846734","question":"\u00bfComo te enteraste de nosotros?","label":"\u00bfComo te enteraste de nosotros?","type":"list-image","required":false,"attachment_type":"","position":7,"calculations":[],"choices":{"65472087":{"id":"65472087","label":"FACEBOOK","position":0,"image":[]},"65472088":{"id":"65472088","label":"RADIO","position":1,"image":[]},"65472089":{"id":"65472089","label":"REFERIDO","position":2,"image":[]},"65472090":{"id":"65472090","label":"SUCURSAL","position":3,"image":[]},"71988792":{"id":"71988792","label":"MODULO","position":4,"image":[]}},"supersize":false,"labels_enabled":true},{"id":"57160960","question":"Modulo","label":"Modulo","type":"textfield","required":false,"attachment_type":"","position":8,"calculations":[]},{"id":"57366088","question":"Referido","label":"Referido","type":"textfield","required":false,"attachment_type":"","position":9,"calculations":[]},{"id":"57160940","question":"Sucursal","label":"Sucursal","type":"list","required":false,"attachment_type":"","position":10,"calculations":[],"choices":{"71715803":{"id":"71715803","label":"Centro","position":0},"71715804":{"id":"71715804","label":"Cumbres","position":1}}},{"id":"54228750","question":"Fecha de registro","label":"Fecha de registro","type":"date","required":false,"attachment_type":"","position":11,"calculations":[],"dateFormat":{"id":287871,"structure":"DDMMYYYY","separator":"\/"}},{"id":"54403552","question":"CITA","label":"CITA","type":"group","required":false,"attachment_type":"","position":12,"calculations":[],"content":"CITA","button":"","button_enabled":false},{"id":"54403553","question":"Nombre completo","label":"Nombre completo","type":"textfield","required":false,"attachment_type":"","position":13,"calculations":[]},{"id":"57040548","question":"Fecha de la cita","label":"Fecha de la cita","type":"date","required":false,"attachment_type":"","position":14,"calculations":[],"dateFormat":{"id":316694,"structure":"DDMMYYYY","separator":"\/"}},{"id":"54672652","question":"Hora de la cita","label":"Hora de la cita","type":"textfield","required":false,"attachment_type":"","position":15,"calculations":[]},{"id":"57190961","question":"Lugar de la cita","label":"Lugar de la cita","type":"list","required":false,"attachment_type":"","position":16,"calculations":[],"choices":{"71752144":{"id":"71752144","label":"Centro","position":0},"71752145":{"id":"71752145","label":"Cumbres","position":1}}},{"id":"54403593","question":"MATRICULA","label":"MATRICULA","type":"group","required":false,"attachment_type":"","position":17,"calculations":[],"content":"MATRICULA","button":"","button_enabled":false},{"id":"54403594","question":"Nombre completo","label":"Nombre completo","type":"textfield","required":false,"attachment_type":"","position":18,"calculations":[]},{"id":"57040805","question":"Cual es la hora de la cita de orientaci\u00f3n","label":"Cual es la hora de la cita de orientaci\u00f3n","type":"textfield","required":false,"attachment_type":"","position":19,"calculations":[]},{"id":"57041306","question":"Plan de curso","label":"Plan de curso","type":"dropdown","required":false,"attachment_type":"","position":20,"calculations":[],"choices":["2800","1980","Fraccionado","Contado","Otro","Otro","Otro","Otro"],"options":"2800\r\n1980\r\nFraccionado\r\nContado\r\nOtro\r\nOtro\r\nOtro\r\nOtro","alphabetical":false},{"id":"54678416","question":"M\u00e9todo de pago","label":"M\u00e9todo de pago","type":"list","required":false,"attachment_type":"","position":21,"calculations":[],"choices":{"68703834":{"id":"68703834","label":"Tarjeta de credito","position":0},"68703835":{"id":"68703835","label":"Tarjeta de debito","position":1},"68703836":{"id":"68703836","label":"Deposito en banco","position":2},"68703837":{"id":"68703837","label":"Efectivo","position":3},"68703838":{"id":"68703838","label":"Cheque","position":4},"68703839":{"id":"68703839","label":"Transferencia electronica","position":5}}},{"id":"54678453","question":"Numero de folio","label":"Numero de folio","type":"textfield","required":false,"attachment_type":"","position":22,"calculations":[]}],"outros":[],"intros":[{"id":2577496,"uid":"1389026","image":[],"attachment_type":"image","body":"HOLA!","body_enabled":true,"button":"Iniciar","button_enabled":true,"description":"Sistema de recopilaci\u00f3n de datos para nuevos aspirantes.","description_enabled":true,"enabled":true}],"id":3762901,"uid":"NvIOCm","name":"Registro E4e","design":[]};
         </script>
 <link rel="stylesheet" type="text/css" href="https://assets.typeform.com/forms/styles/3937042?v=3705420">
-<link id="font" href='https://fonts.googleapis.com/css?family=Karla:400,700&amp;text=' rel='stylesheet' type='text/css'>	
+<link id="font" href='https://fonts.googleapis.com/css?family=Karla:400,700&amp;text=' rel='stylesheet' type='text/css'>
 </head>
 <body class="preload   default  repeat  branding ">
 <div id="typeform" class="">
@@ -925,8 +925,8 @@ Escribe aquí el correo electrónico del contacto
 <ul class="columns">
 <?php
 $letter = "A";
-for ($i =0; $i < 30; $i++){ while($rows = mysql_fetch_array($data)){ 
-?>	 
+for ($i =0; $i < 30; $i++){ while($rows = $data->fetch_array()){
+?>
 <?php echo '<li id="7171580'.$rows['id'].'" class="container">'; ?>
 <?php echo '<input type="hidden" name="value" value="'.$rows['name'].'" />'; ?>
 <div class="letter"><span><?php echo $letter; ?></span></div>
@@ -1381,8 +1381,8 @@ Describe el método de pago preferido del cliente
 <!-- matricula -->
 <!-- box-button -->
 <div class="box-button">
-<button type="button" class="hidden" id="envio">Registrar</button> 
-<div class="msg"></div> 
+<button type="button" class="hidden" id="envio">Registrar</button>
+<div class="msg"></div>
 </div>
 <!-- box-button -->
 </ul>
@@ -1596,14 +1596,14 @@ Gracias por completar este typeform<br/><strong>Crea ahora el tuyo</strong> — 
 <li id="meta-image">https://miguelescobedo.typeform.com/bundles/quickyformapp/images/share_typeform.jpg</li>
 </ul>
 <datalist id="dataUser">
-<?php 
-while($rows = mysql_fetch_array($employees)){
+<?php
+while($rows = $employees->fetch_array()){
 echo '<option id="'.$rows['id'].'" value="'.htmlentities($rows['name']).'">';
 }
-?>	
+?>
 </datalist>
-<?php mysql_free_result($employees); ?>
-<?php mysql_free_result($data); ?>
+<?php mysqli_free_result($employees); ?>
+<?php mysqli_free_result($data); ?>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js"></script>
 <script type="text/javascript">
 var opts = {
@@ -1721,7 +1721,7 @@ $(document).ready(function() {
 });
 $("#envio").click(function(){
 	$(".val").removeClass('val');
-	var 
+	var
 	widthView = $(window).width();
 	registry = $(".registry .selected input").val();
 	list = $("input[list='dataUser']").val();
@@ -1729,9 +1729,9 @@ $("#envio").click(function(){
 	fusion = $(option).find('option[value="' + list + '"]');
 	val = fusion.attr('id');
     if(!val == ''){ user = val; }else{ $("#user").focus().addClass('val');return false; }
-	
+
 if(registry == 'dato'){
-    var 
+    var
     name=$("#nameD").val();
     phone=$("#phone").val();
     email=$("#email").val();
@@ -1752,7 +1752,7 @@ if(registry == 'dato'){
     }else if(municipality==""){ return false;
     }else if(tell==""){ $(".tell .selected input").focus();return false;
 	}else if(day==""){ $(".dayD input").focus();return false;
-    }else{  
+    }else{
 
         var datos='registry='+registry+'&user='+user+'&name='+name+'&phone='+phone+'&email='+email+'&municipality='+municipality+'&tell='+tell+'&day='+day+'&module='+module+'&referred='+referred+'&place='+place;
         //console.log(datos);
@@ -1778,7 +1778,7 @@ if(registry == 'dato'){
         }else if(day==""){ $(".dayC input").focus().addClass('val');return false;
         }else if(hour==""){ $("#hourC").focus().addClass('val');return false;
         }else if(place==""){ $("#placeC").focus().addClass('val');return false;
-        }else{  
+        }else{
             var datos='registry='+registry+'&user='+user+'&name='+name+'&day='+day+'&hour='+hour+'&place='+place;
             //console.log(datos);
             $.ajax({
@@ -1798,15 +1798,15 @@ if(registry == 'dato'){
         hour = $("#hourM").val();
 	    /* movil select */
 	    if(widthView < 1200){ course = $('.course select').val();  }else{ course = $('.course input').val(); }
-	    /* movil select */        
-        pay = $('.pay .selected input').val(); 
+	    /* movil select */
+        pay = $('.pay .selected input').val();
         folio = $("#folioM").val();
-        
+
         if(name==""){ $("#nameM").focus().addClass('val');return false;
         }else if(hour==""){ $("#hourM").focus().addClass('val');return false;
         }else if(pay==""){ $('.pay .selected input').focus().addClass('val');return false;
         }else if(folio==""){ $("#folioM").focus().addClass('val');return false;
-        }else{  
+        }else{
             var datos='registry='+registry+'&user='+user+'&name='+name+'&hour='+hour+'&course='+course+'&pay='+pay+'&folio='+folio;
              //console.log(datos);
             $.ajax({

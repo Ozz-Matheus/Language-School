@@ -44,9 +44,9 @@
     <span class="icon-bar"></span>
   </button>
 </div>
-@endif 
+@endif
   @if(!Auth::guard('employee')->guest())
-    <a id="employee" class="navbar-brand logo" href="{{ url('employee/dashboard') }}"></a><!-- /. Branding Image -->  
+    <a id="employee" class="navbar-brand logo" href="{{ url('employee/dashboard') }}"></a><!-- /. Branding Image -->
   @elseif(!Auth::guard('student')->guest())
     <a id="student" class="navbar-brand logo" href="{{ url('/student/home') }}"></a><!-- /. Branding Image -->
   @else
@@ -58,7 +58,7 @@
     @include('layouts.partials.AuthEmployee')
   @elseif(!Auth::guard('student')->guest())
     @include('layouts.partials.AuthStudent')
-  @endif 
+  @endif
 </nav>
 </header>
 <main>
@@ -82,12 +82,12 @@
           </div>
       </div>
   </div>
-</main>    
+</main>
 <footer>
 <div class="container">
 <div class="col-xs-12">
-<span role="button" onclick="window.open('http://www.unnodo.com/','_blank')">
-  Copyright © Unnodo. All rights reserved.
+<span role="button" onclick="window.open('https://orlandomontesinos.com/','_blank')">
+  Desarrollado por : Orlando Montesinos
 </span>
 </div>
 </div><!-- container -->
@@ -102,7 +102,7 @@
   $(function () {
     $('.table-striped').DataTable({
         responsive: true,
-        "order": [ 0, 'desc' ], 
+        "order": [ 0, 'desc' ],
         "language": { "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json" }
       });
   });

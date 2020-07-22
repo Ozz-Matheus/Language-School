@@ -32,9 +32,9 @@ class ClassroomRequest extends FormRequest
         ];
 
         if($this->method() !== 'PUT')
-        {            
+        {
 
-            $rules['name'] = ['unique:classrooms'];
+            $rules['name'] = ['required','unique:classrooms'];
 
         }else{
 

@@ -12,7 +12,7 @@ this.activeTarget=b,this.clear();var c=this.selector+'[data-target="'+b+'"],'+th
 /*!
  * classie - class helper functions
  * from bonzo https://github.com/ded/bonzo
- * 
+ *
  * classie.has( elem, 'my-class' ) -> true/false
  * classie.add( elem, 'my-new-class' )
  * classie.remove( elem, 'my-unwanted-class' )
@@ -101,20 +101,20 @@ $(document).ready(function(){
 	$(".employee .collapse a.active").closest('.collapse').addClass('in');
 });
 /* Information */
-var 
+var
 company = "E4e Institute";
 start = "01-09-2017";
 author = "Unnodo";
 web = "unnodo.com";
 email = "hola@unnodo.com";
-version = "0.2"; 
-end = "15-02-2018"; 
+version = "0.2";
+end = "15-02-2018";
 /* Information */
 // Description
-one = "Description: Official theme for "+company+"."+'\n'; 
-two = "Start of project: "+start+"."+'\n'; 
-three = "Contact: "+author+" - Web = "+web+" - Email = "+email+"."+'\n'; 
-four = "Version: "+version+"."+'\n'; 
+one = "Description: Official theme for "+company+"."+'\n';
+two = "Start of project: "+start+"."+'\n';
+three = "Contact: "+author+" - Web = "+web+" - Email = "+email+"."+'\n';
+four = "Version: "+version+"."+'\n';
 five = "Full Stack Developer: Orlando Montesinos Quintana. / Email: montesinos.quintana@gmail.com."+'\n';
 six = "Update of project: "+end+"."+'\n';
 description = one+two+three+four+five+six;
