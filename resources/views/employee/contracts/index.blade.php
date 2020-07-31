@@ -2,12 +2,12 @@
 @section('content')
 	<div class="panel-heading">
 		Lista de Contratos
-	</div><!-- /. panel-heading --> 
+	</div><!-- /. panel-heading -->
 	<div class="panel-body">
 	    <div class="container-fluid">
 	    	<div class="text-right">
-	    		<a href="{{ route('employee.contracts.create') }}" 
-	    			title="Registrar Contrato" 
+	    		<a href="{{ route('employee.contracts.create') }}"
+	    			title="Registrar Contrato"
 	    			class="btn btn-default">
 	    			Registrar Contrato
 	    		</a>
@@ -29,23 +29,23 @@
 				<tr>
 				  <td>{{ $contract->order }}</td>
 				  <td>{{ $contract->name_of_holder }}</td>
-				  <td>{{ $contract->branch_office->name }}</td>
+				  <td>{{ $contract->branch_office ? $contract->branch_office->name : 'Sin asignar' }}</td>
 				  <td>{{ $contract->created_at->diffForHumans() }}</td>
 				  <td>
 		            <a href="{{ route('employee.contracts.show', $contract) }}" class="btn btn-xs btn-default">
 		              <i class="fa fa-eye"></i>
 		            </a>
-				      <a href="{{ route('employee.contracts.edit', $contract) }}" 
+				      <a href="{{ route('employee.contracts.edit', $contract) }}"
 				      	 class="btn btn-xs btn-default">
 				      	<i class="fa fa-pencil"></i>
 				      </a>
-				      <form method="POST" 
-				            action="{{ route('employee.contracts.destroy', $contract) }}" 
+				      <form method="POST"
+				            action="{{ route('employee.contracts.destroy', $contract) }}"
 				            style="display: inline">
 
 				      {{ csrf_field() }} {{ method_field('DELETE') }}
 
-				        <button class="btn btn-xs btn-default" 
+				        <button class="btn btn-xs btn-default"
 				                onclick="return confirm('Estás seguro de querer eliminar esta Contrato?')">
 				          <i class="fa fa-times"></i>
 				        </button>
@@ -60,5 +60,5 @@
 				<i class="fa fa-file-excel-o" aria-hidden="true"></i>
 	        </a>
 	     </div>
-	</div><!-- /. panel-body --> 
+	</div><!-- /. panel-body -->
 @endsection

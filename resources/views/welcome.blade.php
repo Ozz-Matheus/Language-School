@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="panel-heading">
-        <i class="fa fa-user" aria-hidden="true"></i> 
+        <i class="fa fa-user" aria-hidden="true"></i>
         <span>&nbsp;</span>
-        E4E PLATAFORM. 
+        E4E PLATAFORM.
     </div>
     <div class="panel-body">
         <div class="container-fluid">

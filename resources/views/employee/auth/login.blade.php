@@ -3,13 +3,13 @@
 @section('content')
 <div class="panel-heading">
     <span>Inicio de sesión para gerenciar</span>
-</div><!-- /. panel-heading --> 
+</div><!-- /. panel-heading -->
 <div class="panel-body">
     <form class="form-horizontal" role="form" method="POST" action="{{ url('/employee/login') }}">
         {{ csrf_field() }}
 
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <label for="email" class="col-md-4 control-label">Correo Electronico</label>
+            <label for="email" class="col-md-4 control-label">Correo Electrónico</label>
 
             <div class="col-md-6">
                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -49,12 +49,12 @@
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
                 <button type="submit" class="btn btn-primary">
-                    <i class="fa fa-btn fa-sign-in"></i> Iniciar 
+                    <i class="fa fa-btn fa-sign-in"></i> Iniciar
                 </button>
 
                 <a class="btn btn-link" href="{{ url('/employee/password/reset') }}">¿Olvidaste tu contraseña?</a>
             </div>
         </div>
     </form>
-</div><!-- /. panel-body --> 
+</div><!-- /. panel-body -->
 @endsection

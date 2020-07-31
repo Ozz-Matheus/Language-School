@@ -20,6 +20,17 @@ class DataController extends Controller
         return view('employee.data.index', compact('datas'));
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('employee.data.create');
+    }
+
+
 
     /**
      * Display the specified resource.
