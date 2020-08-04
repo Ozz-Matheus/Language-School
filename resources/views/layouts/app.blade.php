@@ -86,7 +86,7 @@
 <footer>
 <div class="container">
 <div class="col-xs-12">
-<span role="button" onclick="window.open('https://orlandomontesinos.com/','_blank')">
+<span class="small" role="button" onclick="window.open('https://orlandomontesinos.com/','_blank')">
   Desarrollado por : Orlando Montesinos
 </span>
 </div>

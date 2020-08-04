@@ -2,7 +2,7 @@
 @section('content')
 <div class="panel-heading">
     Registrar una Agenda
-</div><!-- /. panel-heading --> 
+</div><!-- /. panel-heading -->
 <div class="panel-body">
     <div class="col-md-8 col-md-offset-2">
         @include('layouts.partials.errors')
@@ -16,7 +16,7 @@
                     <select name="topic_id" id="topic_id" class="form-control">
                         <option value="">SELECCIONA UN TEMA</option>
                     @foreach($topics as $topic)
-                        <option 
+                        <option
                             value="{{ $topic->id }}"
                             {{ old('topic_id') == $topic->id ? 'selected' : '' }} >
                             {{ $topic->name }}
@@ -33,7 +33,7 @@
                     <select name="classroom_id" id="topic_id" class="form-control">
                         <option value="">SELECCIONA UN AULA</option>
                    @foreach($classrooms as $classroom)
-                        <option 
+                        <option
                             value="{{ $classroom->id }}"
                             {{ old('classroom_id') == $classroom->id ? 'selected' : '' }} >
                             {{ $classroom->name }}
@@ -58,7 +58,7 @@
                     <select name="time" id="time" class="form-control">
                         <option value="">SELECCIONA UNA HORA</option>
                     @foreach($timetables as $timetable)
-                        <option 
+                        <option
                             value="{{ $timetable->time }}"
                             {{ old('time') == $timetable->time? 'selected' : '' }} >
                             {{ setHour($timetable->time)}}
@@ -69,11 +69,11 @@
             </div><!-- /. form-group -->
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
-                    <input class="hide" required="" name="employee_id" type="hidden" value="{{ $employee->id }}">
+                    <input class="hide" required="" name="employee_id" type="hidden" value="{{ $employee? $employee->id : '' }}">
                     <input class="btn btn-default" type="submit" value="Registrar">
                 </div>
             </div><!-- /. form-group -->
         </form>
     </div>
-</div><!-- /. panel-body --> 
+</div><!-- /. panel-body -->
 @endsection

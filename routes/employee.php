@@ -43,31 +43,31 @@ Route::group(['middleware' => 'role:Super|Admin|Conta'], function () {
 // CONTADURIA
 
 
-Route::group(['middleware' => 'role:Super|Admin|Merca'], function () {
+// Route::group(['middleware' => 'role:Super|Admin|Merca'], function () {
 
-	Route::get('/data',['uses' => 'DataController@index','as' => 'data.index']);
-	Route::get('/data/{data}/show',['uses' => 'DataController@show','as' => 'data.show']);
-	Route::delete('/data/{data}/destroy',['uses' => 'DataController@destroy','as' => 'data.destroy']);
+// 	Route::get('/data',['uses' => 'DataController@index','as' => 'data.index']);
+// 	Route::get('/data/{data}/show',['uses' => 'DataController@show','as' => 'data.show']);
+// 	Route::delete('/data/{data}/destroy',['uses' => 'DataController@destroy','as' => 'data.destroy']);
 
-	Route::post('/comment',['uses' => 'CommentController@store','as' => 'comment.store']);
+// 	Route::post('/comment',['uses' => 'CommentController@store','as' => 'comment.store']);
 
-	Route::get('/appointments',['uses' => 'AppointmentController@index','as' => 'appointments.index']);
-	Route::get('/appointments/{appointment}/show',['uses' => 'AppointmentController@show','as' => 'appointments.show']);
-	Route::delete('/appointments/{appointment}/destroy',['uses' => 'AppointmentController@destroy','as' => 'appointments.destroy']);
+// 	Route::get('/appointments',['uses' => 'AppointmentController@index','as' => 'appointments.index']);
+// 	Route::get('/appointments/{appointment}/show',['uses' => 'AppointmentController@show','as' => 'appointments.show']);
+// 	Route::delete('/appointments/{appointment}/destroy',['uses' => 'AppointmentController@destroy','as' => 'appointments.destroy']);
 
-	Route::post('/explication',['uses' => 'ExplicationController@store','as' => 'explication.store']);
+// 	Route::post('/explication',['uses' => 'ExplicationController@store','as' => 'explication.store']);
 
 
-	Route::get('/registrations',['uses' => 'RegistrationController@index','as' => 'registrations.index']);
-	Route::get('/registrations/{registration}/show',['uses' => 'RegistrationController@show','as' => 'registrations.show']);
-	Route::delete('/registrations/{registration}/destroy',['uses' => 'RegistrationController@destroy','as' => 'registrations.destroy']);
+// 	Route::get('/registrations',['uses' => 'RegistrationController@index','as' => 'registrations.index']);
+// 	Route::get('/registrations/{registration}/show',['uses' => 'RegistrationController@show','as' => 'registrations.show']);
+// 	Route::delete('/registrations/{registration}/destroy',['uses' => 'RegistrationController@destroy','as' => 'registrations.destroy']);
 
-	Route::get('/audited',['uses' => 'AuditedController@index','as' => 'audited.index']);
-	Route::get('audited/{employee}/data', ['uses'=>'AuditedController@auditedData', 'as' => 'audited.data']);
-	Route::get('audited/{employee}/appointments', ['uses'=>'AuditedController@auditedAppointment', 'as' => 'audited.appointments']);
-	Route::get('audited/{employee}/registrations', ['uses'=>'AuditedController@auditedRegistration', 'as' => 'audited.registrations']);
+// 	Route::get('/audited',['uses' => 'AuditedController@index','as' => 'audited.index']);
+// 	Route::get('audited/{employee}/data', ['uses'=>'AuditedController@auditedData', 'as' => 'audited.data']);
+// 	Route::get('audited/{employee}/appointments', ['uses'=>'AuditedController@auditedAppointment', 'as' => 'audited.appointments']);
+// 	Route::get('audited/{employee}/registrations', ['uses'=>'AuditedController@auditedRegistration', 'as' => 'audited.registrations']);
 
-});
+// });
 // MERCADOTECNIA
 
 
@@ -86,7 +86,7 @@ Route::group(['middleware' => 'role:Super|Admin|Acade'], function () {
 	Route::resource('/students','StudentController', ['except' => 'show']);
 
 });
-// DIRECCION ACADEMICA 
+// DIRECCION ACADEMICA
 
 
 Route::group(['middleware' => 'role:Super|Admin|Docen'], function () {

@@ -16,7 +16,7 @@
 	<a href="{{ url('employee/payments') }}" class="{{ setActiveRoute('employee.payments*') }}">Pagos</a>
 </div>
 @endif
-@if( Auth::guard('employee')->user()->hasRole(['Super','Admin','Merca']))
+{{-- @if( Auth::guard('employee')->user()->hasRole(['Super','Admin','Merca']))
 <div class="title" role="button" data-toggle="collapse" href="#merca" aria-expanded="false" aria-controls="merca">
   <p>Mercadotecnia <span class="caret"></span></p>
 </div>
@@ -26,7 +26,7 @@
 	<a href="{{ url('employee/registrations') }}" class="{{ setActiveRoute('employee.registrations*') }}">Registros</a>
 	<a href="{{ url('employee/audited') }}" class="{{ setActiveRoute('employee.audited*') }}">Auditados</a>
 </div>
-@endif
+@endif --}}
 @if( Auth::guard('employee')->user()->hasRole(['Super','Admin','Acade']))
 <div class="title" role="button" data-toggle="collapse" href="#acade" aria-expanded="false" aria-controls="acade">
   <p>Académico <span class="caret"></span></p>
